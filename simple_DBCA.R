@@ -25,17 +25,7 @@ if(!require(emmeans)) install.packages("emmeans")
 library(emmeans)
 library(multcomp)
 medias_dbca <- emmeans(modelo_dbca, ~ tratamiento)
-<<<<<<< HEAD
-
-letras_tukey<- cld(medias_dbca,adjust = "tukey", Letters = letters)
-print(letras_tukey)
-=======
-medias_dbca
 
 letras_tukey<- cld(medias_dbca,adjust = "tukey", Letters = letters)
 print(letras_tukey)
 
-tapply(datos_dbca$rendimiento, datos_dbca$tratamiento, mean)
-
-HSD.test(modelo_dbca, "tratamiento", group = TRUE, console = TRUE)
->>>>>>> c9a71811714d8c927bbefd90e638261ef484db98
